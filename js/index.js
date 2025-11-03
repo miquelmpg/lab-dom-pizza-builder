@@ -116,34 +116,34 @@ function renderButtons() {
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
-  let total = 10;
+  let total = basePrice;
   if (state.pepperoni) {
     document.querySelector(".price ul > li:nth-child(1)").style.display = "block";
-    total += 1;
+    total += ingredients.pepperoni.price;
   } else {
     document.querySelector(".price ul > li:nth-child(1)").style.display = "none";
   }
   if (state.mushrooms) {
     document.querySelector(".price ul > li:nth-child(2)").style.display = "block";
-    total += 1;
+    total += ingredients.mushrooms.price;
   } else {
     document.querySelector(".price ul > li:nth-child(2)").style.display = "none";
   }
   if (state.greenPeppers) {
     document.querySelector(".price ul > li:nth-child(3)").style.display = "block";
-    total += 1;
+    total += ingredients.greenPeppers.price;
   } else {
     document.querySelector(".price ul > li:nth-child(3)").style.display = "none";
   }
   if (state.whiteSauce) {
     document.querySelector(".price ul > li:nth-child(4)").style.display = "block";
-    total += 3;
+    total += ingredients.whiteSauce.price;
   } else {
     document.querySelector(".price ul > li:nth-child(4)").style.display = "none";
   }
   if (state.glutenFreeCrust) {
     document.querySelector(".price ul > li:nth-child(5)").style.display = "block";
-    total += 5;
+    total += ingredients.glutenFreeCrust.price;
   } else {
     document.querySelector(".price ul > li:nth-child(5)").style.display = "none";
   }
